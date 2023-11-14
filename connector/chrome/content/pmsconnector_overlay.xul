@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://pmsconnector/content/skin/pmsconnector.css" type="text/css"?>
+
+<!DOCTYPE window >
+<overlay id="pmsconnector-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://pmsconnector/content/pmsconnector_options.js"/>
+<!-- Firefox -->
+<window id="main-window">
+    <popupset id="mainPopupSet"/>
+</window>
+
+<popupset id="mainPopupSet">
+    <tooltip id="pmsconnector_tip"
+            noautohide="true"
+            orient="vertical"
+            position="before_start">
+        <hbox>
+            <hbox align="left">
+                <vbox>
+                    <image src='chrome://pmsconnector/content/skin/images/pmsconnector.gif' height="78" width="168"/>
+                </vbox>
+            </hbox>
+            <vbox>
+                <hbox id="im-toolbar-tooltip-header" align="right">
+                    <label id="lblHeader">PMS Connector</label>
+                </hbox>
+                <hbox id="im-toolbar-tooltip-version" align="right">
+                    <label id="lblVersion">&#160;&#160;&#160;Version 1.0</label>
+                </hbox>
+                <hbox id="im-toolbar-tooltip-dev" align="right">
+                    <label id="lblDev">&#160;&#160;&#160;nG<span id="lblDev1">I</span>N Technologies</label>
+                </hbox>
+            </vbox>
+        </hbox>
+    </tooltip>
+
+    <popup id="pmsconnector_options-contextmenu" xxposition="at_pointer">
+        <menuitem id="pmsconnector_options-contextmenu-defaultstocks" label="About PMS Connector"  oncommand="pmsconnector_activateAbout();" />
+    </popup>
+</popupset>
+<statusbar id="status-bar">
+    <statusbarpanel id="pmsconnector" tooltip="pmsconnector_tip"
+        label="PMS"
+        oncontextmenu="pmsconnector_activateOptionsContext(event); event.stopPropagation();">
+        <vbox flex="1" pack="center">
+          <image
+            id="pmsconnector-status-bar-img"
+            src="chrome://pmsconnector/content/skin/images/logo.png" 
+            style="width:16px ; height:16px;"            
+            mousethrough="never"
+            ondblclick="pmsconnector_activateOptionsContext(event)"
+            onclick="pmsconnector_activateOptionsContext(event)"/>
+            
+        </vbox>
+    </statusbarpanel>
+</statusbar>
+
+</overlay>

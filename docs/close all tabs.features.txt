@@ -1,0 +1,16 @@
+close all tabs
+	var closeTabs = function() {
+	tabpanel.items.each(
+		function(item) {
+			if(item.closable) {
+				tabpanel.remove(item);
+			}
+		});
+	};
+	http://extjs.com/deploy/ext-2.0-beta1/docs/resources/TabCloseMenu.js
+	You might want to specify the second parameter true if you do not intend to reuse the removed Panel. This will clear up resources used by the Panal.
+
+Add edit ID/Address proof
+View proof from View guests panel in rooms
+Generate Police reports
+Validations for all forms

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://pmsconnector/content/skin/pmsconnector.css" type="text/css"?>
+
+<!DOCTYPE window>
+
+<dialog id="pmsconnector-aboutdialog"
+      xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      autosize="true"
+      resizable="no"
+      persist="screenX screenY"
+      width="400"
+      height="225"
+      buttons="accept"
+      title="PMS Connector">
+
+<groupbox>
+   <caption label="About"/>
+   <hbox align="left">
+    <vbox>
+        <image src='chrome://pmsconnector/content/skin/images/pmsconnector.gif' height="78" width="168"/>
+    </vbox>   
+   </hbox> 
+   <hbox align="right">
+     <label id="lblHeader1" value="PMS Connector"/>
+   </hbox>
+   <hbox align="right">
+     <label value="Version 1.0"/><br/>
+   </hbox>
+   <hbox>
+     <spacer flex="1"/>
+   </hbox>
+   <hbox>
+   </hbox>
+   <hbox>
+   </hbox>
+   <hbox>
+   </hbox>
+     <spacer flex="1"/>
+   <hbox align="right">
+      <button dlgtype="accept" id="myAccept"/>
+   </hbox>
+</groupbox>
+</dialog>

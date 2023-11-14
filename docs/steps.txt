@@ -1,0 +1,7 @@
+install xampp
+copy php.ini
+make it as a service
+copy files
+copy db
+execute licgen/packlic
+

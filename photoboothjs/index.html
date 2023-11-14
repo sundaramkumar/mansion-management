@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript" src="website/js/jquery.js"></script>
+		<script type="text/javascript" src="photobooth_min.js"></script>
+		<script type="text/javascript" src="website/js/script.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+		<link type="text/css" rel="stylesheet" media="screen" href="website/css/page.css" />
+	</head>
+	<body>
+		
+		<div id="wrapper">
+			<div id="example"></div>
+			<div id="gallery" stysle="display:none;"></div>
+
+			<button id="snap" class="sexyButton" onclick="saveImage()">Save Image</button>
+			<button id="close" onclick="closeWindow()">Close</button>		
+		</div>
+		<!-- <script type="text/javascript" src="website/js/hijs.js"></script> -->
+		<script type="text/javascript">
+		</script>
+		<script type="text/javascript">
+		function closeWindow(){
+			window.close();
+		}		
+		function saveImage(){
+			var imageElement = window.opener.document.getElementById("guestSignImage");  
+			imageElement.src = document.getElementById("finalImage").src; 	
+			// imageElement.style.width = document.getElementById('finalImage').height
+			// imageElement.style.height = document.getElementById('finalImage').width
+		}
+		</script>
+
+	</body>
+</html>

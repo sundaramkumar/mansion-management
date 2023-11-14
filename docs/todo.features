@@ -1,0 +1,9 @@
+close all tabs
+var closeTabs = function() {
+tabpanel.items.each(
+function(item) {
+if(item.closable) {
+tabpanel.remove(item);
+}
+});
+};
